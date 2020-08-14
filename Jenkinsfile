@@ -24,6 +24,7 @@ pipeline {
 		     sh "ls -lrt"
 			 sh "chmod +x ./sonar.sh"
 			 sh "ls -lrt"
+			   sh "./sonar.sh"
                 }
 		}
 
