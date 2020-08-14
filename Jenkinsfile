@@ -38,10 +38,9 @@ pipeline {
                             }
 
                             steps {
-                                echo '=== Building simple-java-maven-app Docker Image ==='
-                                script {
-                                    app = docker.build("luckynitin/simple-java-maven-app")
-                                }
+                               withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'aws-keyd2f221f3-4515-46cc-800b-b089de98dbf3', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+        AWS("--region=us-east-2 s3 ls")
+    }
                             }
                 }
                 stage('Push Docker Image') {
