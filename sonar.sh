@@ -2,6 +2,7 @@
 export SONAR_SCANNER_OPTS="-Xmx512m"
 mkdir /tmp -p
 cd /tmp
+rm sonar-scanner-cli-4.2.0.1873*
 wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.2.0.1873-linux.zip
 unzip sonar-scanner-cli-4.2.0.1873-linux.zip
 mkdir /tmp/sonar-scanner/ -p
