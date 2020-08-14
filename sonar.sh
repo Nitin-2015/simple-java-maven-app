@@ -19,6 +19,6 @@ mkdir -p ${WORKSPACE}/target/.sonar
       -Dsonar.login=11a95d1648bb6b9adef877bbde6e49254af51ead \
       -Dsonar.skipPackageDesign=true \
       -Dsonar.exclusions=**/*.xml \
-      -Dsonar.working.directory=${WORKSPACE}/target/.sonar \
-ls -lrt
-pwd
+      -Dsonar.working.directory=${WORKSPACE}/target/.sonar 
+ ls -lrt
+ pwd
