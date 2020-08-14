@@ -1,5 +1,7 @@
 #!/bin/bash
 export SONAR_SCANNER_OPTS="-Xmx512m"
+rm -rf /tmp/*
+rm -rf ${WORKSPACE}/target/.sonar/*
 mkdir /tmp -p
 cd /tmp
 rm -rf sonar-scanner-cli-4.2.0.1873*
