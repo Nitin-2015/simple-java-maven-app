@@ -12,7 +12,7 @@ echo "sonar.host.url=https://sonarcloud.io \n sonar.sourceEncoding=UTF-8" > /tmp
 export PATH="$PATH:/tmp/sonar-scanner-4.2.0.1873-linux/bin"
 sonar-scanner -v
 mkdir -p ${WORKSPACE}/target/.sonar
-/tmp/sonar-scanner-4.2.0.1873-linux/bin/sonar-scanner \
+/tmp/sonar-scanner-4.2.0.1873-linux/bin/sonar-scanner -X \
       -Dsonar.host.url=https://sonarcloud.io \
       -Dsonar.projectKey=Nitin-2015_simple-java-maven-app \
       -Dsonar.projectName=simple-java-maven-app \
