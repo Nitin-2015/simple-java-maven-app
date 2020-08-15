@@ -18,7 +18,7 @@ echo SONAR_RUNNER_HOME = $SONAR_RUNNER_HOME
 mkdir projects
 export PROJECT_HOME=./projects
 mkdir -p ${WORKSPACE}/target/.sonar
-/tmp/sonar-scanner-4.2.0.1873-linux/bin/sonar-scanner -X \
+sonar-scanner -X \
       -Dsonar.host.url=https://sonarcloud.io \
       -Dsonar.projectKey=Nitin-2015_simple-java-maven-app \
       -Dsonar.projectName=simple-java-maven-app \
