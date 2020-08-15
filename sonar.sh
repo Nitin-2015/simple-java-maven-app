@@ -2,16 +2,21 @@
 export SONAR_SCANNER_OPTS="-Xmx512m"
 rm -rf /tmp/*
 rm -rf ${WORKSPACE}/target/.sonar/*
-mkdir /tmp -p
-cd /tmp
-rm -rf sonar-scanner-cli-4.2.0.1873*
-wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.2.0.1873-linux.zip
-unzip sonar-scanner-cli-4.2.0.1873-linux.zip
-mkdir /tmp/sonar-scanner/ -p
-echo "sonar.host.url=https://sonarcloud.io \n sonar.sourceEncoding=UTF-8" > /tmp/sonar-scanner-4.2.0.1873-linux/conf/sonar-scanner.properties
-export PATH="$PATH:/tmp/sonar-scanner-4.2.0.1873-linux/bin"
+#mkdir /tmp -p
+#cd /tmp
+#rm -rf sonar-scanner-cli-4.2.0.1873*
+#wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.2.0.1873-linux.zip
+#unzip sonar-scanner-cli-4.2.0.1873-linux.zip
+#mkdir /tmp/sonar-scanner/ -p
+#echo "sonar.host.url=https://sonarcloud.io \n sonar.sourceEncoding=UTF-8" > /tmp/sonar-scanner-4.2.0.1873-linux/conf/sonar-scanner.properties
+#export PATH="$PATH:/tmp/sonar-scanner-4.2.0.1873-linux/bin"
+echo $PATH
+export PATH="$PATH:/var/opt/sonar-scanner/bin"
+echo $PATH
 sonar-scanner -v
 echo SONAR_RUNNER_HOME = $SONAR_RUNNER_HOME
+mkdir projects
+export PROJECT_HOME=./projects
 mkdir -p ${WORKSPACE}/target/.sonar
 /tmp/sonar-scanner-4.2.0.1873-linux/bin/sonar-scanner -X \
       -Dsonar.host.url=https://sonarcloud.io \
