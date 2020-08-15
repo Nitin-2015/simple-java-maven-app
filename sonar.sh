@@ -11,7 +11,7 @@ mkdir /tmp/sonar-scanner/ -p
 echo "sonar.host.url=https://sonarcloud.io \n sonar.sourceEncoding=UTF-8" > /tmp/sonar-scanner-4.2.0.1873-linux/conf/sonar-scanner.properties
 export PATH="$PATH:/tmp/sonar-scanner-4.2.0.1873-linux/bin"
 sonar-scanner -v
-echo "SONAR_RUNNER_HOME = %SONAR_RUNNER_HOME%"
+echo SONAR_RUNNER_HOME = $SONAR_RUNNER_HOME
 mkdir -p ${WORKSPACE}/target/.sonar
 /tmp/sonar-scanner-4.2.0.1873-linux/bin/sonar-scanner -X \
       -Dsonar.host.url=https://sonarcloud.io \
