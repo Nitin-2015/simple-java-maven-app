@@ -18,6 +18,7 @@ mkdir -p ${WORKSPACE}/target/.sonar
       -Dsonar.projectName=simple-java-maven-app \
       -Dsonar.projectVersion=${BUILD_ID} \
       -Dsonar.projectBaseDir=/var/lib/jenkins/workspace/Demo_ECR_SONAR/simple-java-maven-app \
+      -Dsonar.sources=. \
       -Dsonar.java.binaries=/var/lib/jenkins/workspace/Demo_ECR_SONAR/simple-java-maven-app/target/classes/com/mycompany/app \
       -Dsonar.login=11a95d1648bb6b9adef877bbde6e49254af51ead \
       -Dsonar.skipPackageDesign=true \
