@@ -14,9 +14,10 @@ echo $PATH
 export PATH="$PATH:/var/opt/sonar-scanner/bin"
 echo $PATH
 sonar-scanner -v
-echo SONAR_RUNNER_HOME = $SONAR_RUNNER_HOME
-mkdir projects
-export PROJECT_HOME=./projects
+
+rm -rf projects
+mkdir -p /var/lib/jenkins/workspace/projects
+export PROJECT_HOME=/var/lib/jenkins/workspace/projects
 mkdir -p ${WORKSPACE}/target/.sonar
 sonar-scanner -X \
       -Dsonar.host.url=https://sonarcloud.io \
