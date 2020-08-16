@@ -24,6 +24,7 @@ sonar-scanner -X \
       -Dsonar.projectKey=Nitin-2015_simple-java-maven-app \
       -Dsonar.projectName=simple-java-maven-app \
       -Dsonar.projectVersion=${BUILD_ID} \
+      -Dsonar.organization=nitin-2015 \
       -Dsonar.projectBaseDir=/var/lib/jenkins/workspace/Demo_ECR_SONAR/simple-java-maven-app \
       -Dsonar.project.home=/var/lib/jenkins/workspace/Demo_ECR_SONAR/simple-java-maven-app/tutu \
       -Dsonar.sources=. \
