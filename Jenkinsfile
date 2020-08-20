@@ -19,14 +19,7 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-         stage("Quality Gates SonarQube"){
-		   steps {
-		     sh "ls -lrt"
-			 sh "chmod +x ./sonar.sh"
-			 sh "ls -lrt"
-			   sh "./sonar.sh"
-                }
-		}
+         
 
         stage('Test') {
             steps {
